@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan | Aisyah & Fajar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="preload" href="music/lagu.mp3" as="audio" type="audio/mpeg" />
+  </head>
+  <body>
+    <!-- Opening Section -->
+    <section id="opening" class="active">
+      <div class="opening-content">
+        <h1>Wedding Invitation</h1>
+        <h2 class="couple-name">Aisyah & Fajar</h2>
+        <p class="invitation-text">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+        <p>Dengan Hormat, Kami Mengundang Anda untuk Hadir</p>
+        <button onclick="openInvitation()">Buka Undangan</button>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Background Music -->
+      <audio id="bg-music" src="music/lagu.mp3" autoplay loop></audio>
+
+      <!-- Home Section -->
+      <section id="home" onclick="showSection('#home')">
+        <div class="home-section">
+          <div class="home-details">
+            <h2>Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
+            <p>
+              Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
+              menyelenggarakan pernikahan kami:
+            </p>
+            <div class="couple">
+              <h3 class="couple-name">Aisyah Nur Halimah</h3>
+              <span class="couple-parent">Putri dari bapak & ibu</span>
+            </div>
+            <p>&</p>
+            <div class="couple">
+              <h3 class="couple-name">Fajar Ramadhan</h3>
+              <span class="couple-parent">Putra dari bapak & ibu</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id=""></section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" onclick="showSection('#gallery')">
+        <div class="gallery">
+          <h2>Galeri Kami</h2>
+          <div class="gallery-container">
+            <img src="images/user-1.webp" loading="lazy" />
+            <img src="images/user-1.webp" loading="lazy" />
+            <img src="images/user-1.webp" loading="lazy" class="tall" />
+            <img src="images/user-1.webp" loading="lazy" class="wide" />
+            <img src="images/user-1.webp" loading="lazy" />
+            <img src="images/user-1.webp" loading="lazy" class="wide" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Countdown -->
+      <section id="countdown" onclick="showSection('#countdown')">
+        <div class="countdown">
+          <h2 class="section-title">Hitung Mundur Menuju Hari Bahagia</h2>
+          <div id="timer" class="countdown-timer"></div>
+          <div class="event-schedule">
+            <div class="event-box">
+              <h3>Akad Nikah</h3>
+              <p><strong>Sabtu, 1 Agustus 2025</strong></p>
+              <p>09.00 WIB</p>
+              <p>Rumah mempelai wanita, Jakarta</p>
+            </div>
+            <div class="event-box">
+              <h3>Resepsi</h3>
+              <p><strong>Minggu, 2 Agustus 2025</strong></p>
+              <p>11.00 - Selesai</p>
+              <p>Gedung Serbaguna, Bekasi</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Google Maps -->
+      <section id="location" onclick="showSection('#location')">
+        <div class="location">
+          <h2>Lokasi Akad & Resepsi</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.6842784386445!2d112.60982507585706!3d-7.928006678942799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882046b2d965d%3A0x8f9379f9dc13d9d7!2sGedung%20Serbaguna%20Mahkota%20Wulung!5e0!3m2!1sid!2sid!4v1747921813795!5m2!1sid!2sid"
+            width="80%"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- RSVP -->
+      <section id="rsvp" onclick="showSection('#rsvp')">
+        <h2>Konfirmasi Kehadiran</h2>
+        <form action="#" method="POST">
+          <input type="text" name="nama" placeholder="Nama Anda" required />
+          <input
+            type="number"
+            name="jumlah"
+            placeholder="Jumlah Tamu"
+            required
+          />
+          <textarea name="pesan" placeholder="Ucapan / Doa"></textarea>
+          <button type="submit">Kirim</button>
+        </form>
+      </section>
+    </div>
+    <!-- Bottom Navbar -->
+    <nav class="bottom-navbar">
+      <a href="#" onclick="showSection('#home')">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#" onclick="showSection('#gallery')">
+        <i class="fas fa-images"></i>
+        <span>Galeri</span>
+      </a>
+      <a href="#" onclick="showSection('#countdown')">
+        <i class="fas fa-clock"></i>
+        <span>Countdown</span>
+      </a>
+      <a href="#" onclick="showSection('#location')">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Lokasi</span>
+      </a>
+      <a href="#" onclick="showSection('#rsvp')">
+        <i class="fas fa-envelope"></i>
+        <span>RSVP</span>
+      </a>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>
